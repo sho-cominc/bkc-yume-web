@@ -1,81 +1,120 @@
 {
   "items": [
     {
-      "id": "strawberry-dream",
-      "name": { "ja": "苺のゆめパフェ", "en": "Strawberry Dream Parfait" },
+      "id": "black-parfait",
+      "name": { "ja": "BLACK パフェ", "en": "BLACK Parfait" },
       "price": 1000,
-      "category": "seasonal",
-      "image": "/images/parfait-sample-1.svg",
+      "category": "standard",
+      "image": "/images/parfait-black.jpg",
       "description": {
-        "ja": "新潟産の苺と自家製生クリーム。軽やかでキレのある口溶け。",
-        "en": "Niigata strawberries with our signature whipped cream — light with a clean finish."
+        "ja": "BKC ゆめのシグネチャー。竹炭の黒いクリームにオレオとチョコチップ。甘すぎない大人の一杯。",
+        "en": "BKC Yume's signature. Bamboo-charcoal black cream with Oreo and chocolate chips — bittersweet, grown-up."
       },
-      "allergens": ["milk", "egg", "wheat"],
+      "allergens": ["milk", "egg", "wheat", "soy"],
       "featured": true
     },
     {
-      "id": "matcha-warabi",
-      "name": { "ja": "抹茶とわらび餅パフェ", "en": "Matcha & Warabi-mochi Parfait" },
+      "id": "white-parfait",
+      "name": { "ja": "WHITE パフェ", "en": "WHITE Parfait" },
+      "price": 1000,
+      "category": "standard",
+      "image": "/images/parfait-white.jpg",
+      "description": {
+        "ja": "BLACKと対をなすシグネチャー。ホワイトチョコとミルクの優しい甘さ。",
+        "en": "The white counterpart to BLACK. White chocolate and gentle milk sweetness."
+      },
+      "allergens": ["milk", "egg", "wheat", "soy"],
+      "featured": true
+    },
+    {
+      "id": "ichigo-yogurt",
+      "name": { "ja": "イチゴヨーグルト パフェ", "en": "Strawberry Yogurt Parfait" },
       "price": 950,
       "category": "standard",
-      "image": "/images/parfait-sample-2.svg",
+      "image": "/images/parfait-ichigo-yogurt.jpg",
       "description": {
-        "ja": "宇治抹茶のほろ苦さと、もちもちわらび餅。甘さ控えめの定番。",
-        "en": "Uji matcha's gentle bitterness meets chewy warabi-mochi — a low-sweet staple."
+        "ja": "新潟産いちごと自家製ヨーグルトクリーム。甘さと酸味のバランスが自慢。",
+        "en": "Niigata strawberries with house-made yogurt cream — balanced sweet and tart."
       },
       "allergens": ["milk", "egg"],
       "featured": true
     },
     {
       "id": "choco-banana",
-      "name": { "ja": "チョコバナナパフェ", "en": "Choco Banana Parfait" },
+      "name": { "ja": "チョコバナナ パフェ", "en": "Choco Banana Parfait" },
       "price": 900,
       "category": "standard",
-      "image": "/images/parfait-sample-3.svg",
+      "image": "/images/parfait-choco-banana.jpg",
       "description": {
         "ja": "子供も大人も大好きな王道。濃厚ビターチョコと完熟バナナ。",
         "en": "Timeless, for kids and adults — bittersweet chocolate and ripe banana."
       },
       "allergens": ["milk", "egg", "wheat", "soy"],
-      "featured": true
+      "featured": false
     },
     {
-      "id": "melon-cream",
-      "name": { "ja": "メロンの山パフェ", "en": "Melon Mountain Parfait" },
+      "id": "wafu-matcha",
+      "name": { "ja": "和風 パフェ", "en": "Wafu Matcha Parfait" },
+      "price": 950,
+      "category": "standard",
+      "image": "/images/parfait-wafu-matcha.jpg",
+      "description": {
+        "ja": "宇治抹茶とわらび餅、きな粉の和スイーツ仕立て。",
+        "en": "Uji matcha with warabi-mochi and kinako — Japanese-sweet style."
+      },
+      "allergens": ["milk", "egg", "wheat", "soy"],
+      "featured": false
+    },
+    {
+      "id": "hachimitsu-lemon",
+      "name": { "ja": "ハチミツレモン パフェ", "en": "Honey Lemon Parfait" },
+      "price": 950,
+      "category": "seasonal",
+      "image": "/images/parfait-hachimitsu-lemon.jpg",
+      "description": {
+        "ja": "国産レモンとハチミツの爽やかな季節のパフェ。",
+        "en": "Domestic lemon with honey — bright and refreshing seasonal."
+      },
+      "allergens": ["milk", "egg", "wheat"],
+      "featured": false
+    },
+    {
+      "id": "fruit-punch-jelly",
+      "name": { "ja": "ブルーツパンチゼリー パフェ", "en": "Blue Fruit Punch Jelly Parfait" },
       "price": 1000,
       "category": "seasonal",
-      "image": "/images/parfait-sample-4.svg",
+      "image": "/images/parfait-fruit-punch-jelly.jpg",
       "description": {
-        "ja": "旬のメロンを贅沢に。軽い生クリームでメロンの香りを引き立てます。",
-        "en": "Seasonal melon, showcased — light cream lifts the aroma."
+        "ja": "鮮やかなブルーのゼリーとフルーツパンチ。夏限定の見た目から楽しむ一杯。",
+        "en": "Vivid blue jelly with fruit punch — a summer limited that plays with the eye first."
       },
       "allergens": ["milk", "egg"],
       "featured": false
     },
     {
-      "id": "kurumi-caramel",
-      "name": { "ja": "くるみキャラメルパフェ", "en": "Walnut Caramel Parfait" },
-      "price": 900,
-      "category": "standard",
-      "image": "/images/parfait-sample-5.svg",
+      "id": "acai-mixberry-yogurt",
+      "name": { "ja": "アサイー&ミックスベリーヨーグルト パフェ", "en": "Açaí & Mixed Berry Yogurt Parfait" },
+      "price": 1000,
+      "category": "event",
+      "image": "/images/parfait-acai-mixberry-yogurt.jpg",
       "description": {
-        "ja": "香ばしいくるみとほろ苦キャラメル。大人のための一杯。",
-        "en": "Toasted walnut and bittersweet caramel — one for the grown-ups."
+        "ja": "アサイーと数種のベリー、自家製ヨーグルトクリーム。栄養も美味しさも両立。",
+        "en": "Açaí and mixed berries on house yogurt cream — as nutritious as it is delicious."
       },
-      "allergens": ["milk", "egg", "wheat", "tree-nuts"],
+      "allergens": ["milk", "egg"],
       "featured": false
     },
     {
-      "id": "event-sakura",
-      "name": { "ja": "桜と白あんパフェ", "en": "Sakura & Shiro-an Parfait" },
-      "price": 1000,
+      "id": "pancake-trio",
+      "name": { "ja": "パンケーキパフェ（黒・赤・白）", "en": "Pancake Parfait (Black / Red / White)" },
+      "price": 900,
       "category": "event",
-      "image": "/images/parfait-sample-6.svg",
+      "image": "/images/menu-pancake-trio.jpg",
       "description": {
-        "ja": "観桜会限定。桜の香りと白あんのやさしい甘さ。",
-        "en": "Cherry-blossom festival limited. Sakura aroma and mellow white-bean sweetness."
+        "ja": "ふわふわパンケーキをカップに。黒（チョコ）・赤（いちご）・白（ミックスフルーツ）の3種。",
+        "en": "Fluffy pancakes in a cup — Black (chocolate), Red (strawberry), White (mixed fruit)."
       },
-      "allergens": ["milk", "egg", "soy"],
+      "allergens": ["milk", "egg", "wheat", "soy"],
       "featured": false
     }
   ],
