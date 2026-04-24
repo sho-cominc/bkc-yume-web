@@ -1,0 +1,55 @@
+---
+import { type Lang, getDict } from '../../utils/i18n';
+import SectionHeading from '../SectionHeading.astro';
+import MenuCard from '../MenuCard.astro';
+import menuData from '../../data/menu.json';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const dict = getDict(lang);
+---
+<section class="section-cream">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
+    <SectionHeading eyebrow="MENU" title={dict.menu.heading} sub={dict.menu.sub} />
+
+    <div class="mt-10 flex flex-wrap gap-2" role="tablist">
+      <button data-filter="all" class="filter-chip filter-active">{dict.menu.filters.all}</button>
+      <button data-filter="standard" class="filter-chip">{dict.menu.filters.standard}</button>
+      <button data-filter="seasonal" class="filter-chip">{dict.menu.filters.seasonal}</button>
+      <button data-filter="event" class="filter-chip">{dict.menu.filters.event}</button>
+    </div>
+
+    <div id="menu-grid" class="mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {menuData.items.map((item, idx) => (
+        <div data-category={item.category}>
+          <MenuCard lang={lang} itemId={item.id} defaultOpen={idx === 0} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .filter-chip {
+    @apply px-4 py-2 rounded-full border-2 border-ink/20 text-sm font-bold transition hover:border-ink;
+  }
+  .filter-active {
+    @apply bg-ink text-cream border-ink;
+  }
+</style>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('.filter-chip');
+  const cards = document.querySelectorAll<HTMLElement>('#menu-grid > div[data-category]');
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      chips.forEach((c) => c.classList.remove('filter-active'));
+      chip.classList.add('filter-active');
+      const filter = chip.dataset.filter;
+      cards.forEach((card) => {
+        const match = filter === 'all' || card.dataset.category === filter;
+        card.classList.toggle('hidden', !match);
+      });
+    });
+  });
+</script>

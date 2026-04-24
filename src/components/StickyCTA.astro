@@ -1,0 +1,15 @@
+---
+import { type Lang, getDict, SOCIAL } from '../utils/i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const dict = getDict(lang);
+---
+<a
+  href={SOCIAL.instagramDM}
+  target="_blank"
+  rel="noopener"
+  class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-berry text-cream text-center py-4 font-bold shadow-[0_-4px_20px_rgba(0,0,0,0.2)]"
+>
+  ✉ {dict.stickyCta}
+</a>

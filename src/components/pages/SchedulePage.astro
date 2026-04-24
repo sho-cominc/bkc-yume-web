@@ -1,0 +1,54 @@
+---
+import { type Lang, getDict, pick, formatDate } from '../../utils/i18n';
+import SectionHeading from '../SectionHeading.astro';
+import NextEventBanner from '../NextEventBanner.astro';
+import InstagramFeed from '../InstagramFeed.astro';
+import eventData from '../../data/next-event.json';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const dict = getDict(lang);
+---
+<section class="section-cream">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 pt-16 md:pt-24 pb-0">
+    <SectionHeading eyebrow="SCHEDULE" title={dict.schedule.heading} sub={dict.schedule.sub} />
+  </div>
+</section>
+
+<NextEventBanner lang={lang} variant="hero" />
+
+<section class="section-cream">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16">
+    <h2 class="font-display text-3xl md:text-4xl">{dict.schedule.monthHeading}</h2>
+    <ul class="mt-8 divide-y divide-ink/10 border-y border-ink/10">
+      {eventData.thisMonth.map((e) => {
+        const venue = pick(e.venue as any, lang);
+        return (
+          <li class="py-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+            <div class="font-en font-bold text-berry w-28 shrink-0">{e.date}</div>
+            <div class="flex-1 font-bold">{venue}</div>
+            <div class="text-sm opacity-70">{e.time}</div>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</section>
+
+<InstagramFeed lang={lang} />
+
+<section class="section-ink">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16">
+    <h2 class="font-display text-3xl md:text-4xl text-cream">{dict.schedule.pastHeading}</h2>
+    <div class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {eventData.pastVenues.map((v) => {
+        const name = pick(v as any, lang);
+        return (
+          <div class="p-5 rounded-card bg-cream/5 border border-cream/10 text-cream">
+            <div class="font-bold">{name}</div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

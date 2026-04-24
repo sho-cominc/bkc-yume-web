@@ -1,0 +1,21 @@
+---
+import { type Lang, type PageKey, getDict, basePath, PAGE_PATH } from '../utils/i18n';
+
+interface Props { lang: Lang; pageKey: PageKey; variant?: 'dark' | 'light'; }
+const { lang, pageKey, variant = 'dark' } = Astro.props;
+const dict = getDict(lang);
+
+const path = PAGE_PATH[pageKey] ?? '';
+const jaHref = basePath('ja', path);
+const enHref = basePath('en', path);
+
+const baseCls = 'inline-flex items-center text-sm font-bold';
+const activeCls = 'text-berry underline decoration-berry decoration-2 underline-offset-4';
+const inactiveCls = variant === 'dark' ? 'text-cream/70 hover:text-cream' : 'text-ink/60 hover:text-ink';
+const divider = variant === 'dark' ? 'text-cream/40' : 'text-ink/40';
+---
+<div class={baseCls} aria-label="Language">
+  <a href={jaHref} class={lang === 'ja' ? activeCls : inactiveCls} aria-current={lang === 'ja' ? 'true' : undefined}>{dict.nav.lang.ja}</a>
+  <span class={`mx-2 ${divider}`}>|</span>
+  <a href={enHref} class={lang === 'en' ? activeCls : inactiveCls} aria-current={lang === 'en' ? 'true' : undefined}>{dict.nav.lang.en}</a>
+</div>

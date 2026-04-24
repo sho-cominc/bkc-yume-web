@@ -1,0 +1,28 @@
+{
+  "date": "2026-05-03",
+  "weekday": { "ja": "日", "en": "Sun" },
+  "startTime": "11:00",
+  "endTime": "16:00",
+  "venue": { "ja": "高田城址公園 観桜会", "en": "Takada Castle Park Cherry Blossom Festival" },
+  "address": { "ja": "新潟県上越市本城町44", "en": "44 Honjocho, Joetsu, Niigata" },
+  "mapUrl": "https://maps.google.com/?q=%E9%AB%98%E7%94%B0%E5%9F%8E%E5%9D%80%E5%85%AC%E5%9C%92",
+  "note": {
+    "ja": "雨天時は中止の可能性あり。Instagramで最新情報をご確認ください。",
+    "en": "May be cancelled in heavy rain. Check Instagram for updates."
+  },
+  "thisMonth": [
+    { "date": "2026-05-03", "venue": { "ja": "高田城址公園 観桜会", "en": "Takada Castle Park Festival" }, "time": "11:00–16:00" },
+    { "date": "2026-05-10", "venue": { "ja": "直江津海岸 マルシェ", "en": "Naoetsu Beach Marché" }, "time": "10:00–15:00" },
+    { "date": "2026-05-17", "venue": { "ja": "妙高 道の駅あらい", "en": "Myoko Michi-no-Eki Arai" }, "time": "11:00–17:00" },
+    { "date": "2026-05-24", "venue": { "ja": "糸魚川 ヒスイ王国館", "en": "Itoigawa Hisui Ohkoku" }, "time": "11:00–16:00" },
+    { "date": "2026-05-31", "venue": { "ja": "上越妙高駅前 フードフェス", "en": "Joetsu-Myoko Station Food Fest" }, "time": "10:00–18:00" }
+  ],
+  "pastVenues": [
+    { "ja": "高田本町商店街", "en": "Takada Honcho Shotengai" },
+    { "ja": "道の駅あらい", "en": "Michi-no-Eki Arai" },
+    { "ja": "直江津 うみがたり前", "en": "Umigatari Naoetsu" },
+    { "ja": "妙高高原 いもり池", "en": "Imori-ike, Myoko Kogen" },
+    { "ja": "糸魚川 ヒスイ王国館", "en": "Hisui Ohkoku, Itoigawa" },
+    { "ja": "上越市役所マルシェ", "en": "Joetsu City Hall Marché" }
+  ]
+}

@@ -1,0 +1,46 @@
+---
+import { type Lang, pick, getDict } from '../utils/i18n';
+import menuData from '../data/menu.json';
+
+interface Props {
+  lang: Lang;
+  itemId: string;
+  defaultOpen?: boolean;
+}
+const { lang, itemId, defaultOpen = false } = Astro.props;
+const dict = getDict(lang);
+const item = menuData.items.find((i) => i.id === itemId)!;
+const name = pick(item.name as any, lang);
+const desc = pick(item.description as any, lang);
+const labels = menuData.allergenLabels as Record<string, { ja: string; en: string }>;
+
+const badgeText = item.category === 'seasonal' ? dict.menu.seasonalBadge : item.category === 'event' ? dict.menu.eventBadge : '';
+const badgeColor = item.category === 'seasonal' ? 'bg-caramel text-ink' : item.category === 'event' ? 'bg-berry text-cream' : '';
+---
+<article class="bg-cream rounded-card overflow-hidden shadow-sm border border-ink/5 flex flex-col">
+  <div class="relative aspect-[4/5] bg-placeholder flex items-center justify-center">
+    <img src={item.image} alt={name} class="w-full h-full object-cover" loading="lazy" />
+    {badgeText && (
+      <span class={`absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full ${badgeColor}`}>{badgeText}</span>
+    )}
+  </div>
+  <div class="p-5 flex flex-col gap-3 flex-1">
+    <div class="flex items-baseline justify-between gap-3">
+      <h3 class="font-display text-xl leading-tight">{name}</h3>
+      <div class="font-en font-bold text-berry whitespace-nowrap tabular-nums tracking-tight">
+        <span class="text-sm opacity-70">¥</span>{item.price.toLocaleString()}
+      </div>
+    </div>
+    <p class="text-sm opacity-80 leading-relaxed flex-1">{desc}</p>
+    <details class="text-xs mt-2" open={defaultOpen}>
+      <summary class="cursor-pointer text-ink/60 hover:text-ink font-bold">
+        {dict.menu.allergenToggle}
+      </summary>
+      <div class="mt-2 flex flex-wrap gap-2">
+        {item.allergens.map((a) => (
+          <span class="inline-block px-2 py-1 rounded-full bg-ink/5 text-ink/70">{labels[a]?.[lang]}</span>
+        ))}
+      </div>
+    </details>
+  </div>
+</article>

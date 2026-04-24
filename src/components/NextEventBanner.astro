@@ -1,0 +1,60 @@
+---
+import { type Lang, getDict, pick, formatDate, SOCIAL } from '../utils/i18n';
+import eventData from '../data/next-event.json';
+
+interface Props { lang: Lang; variant?: 'banner' | 'hero'; }
+const { lang, variant = 'banner' } = Astro.props;
+const dict = getDict(lang);
+const weekday = pick(eventData.weekday as any, lang);
+const dateStr = formatDate(eventData.date, lang, weekday);
+const venue = pick(eventData.venue as any, lang);
+const address = pick(eventData.address as any, lang);
+const note = pick(eventData.note as any, lang);
+
+const isHero = variant === 'hero';
+---
+<section class={isHero ? 'section-ink' : ''}>
+  <div class={`mx-auto max-w-6xl px-4 sm:px-6 ${isHero ? 'py-16' : 'py-8'}`}>
+    <div class={`rounded-card overflow-hidden ${isHero ? 'bg-cream text-ink p-8 md:p-12' : 'bg-ink text-cream p-6 md:p-8'} shadow-lg`}>
+      <div class="text-xs font-bold tracking-[0.2em] text-berry">{dict.next.label}</div>
+      <div class="mt-3 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div>
+          <div class:list={[
+            'font-display tracking-tight',
+            isHero ? 'text-5xl md:text-7xl' : 'text-3xl md:text-5xl',
+            lang === 'ja' ? 'leading-[1.1]' : 'leading-[0.95]'
+          ]}>
+            {dateStr}
+          </div>
+          <div class="mt-3 text-lg md:text-xl font-bold">{venue}</div>
+          <div class="mt-1 text-sm opacity-80">{address}</div>
+          <div class="mt-1 text-sm opacity-80">{eventData.startTime}–{eventData.endTime}</div>
+          {note && <div class="mt-3 text-xs opacity-70 max-w-md">{note}</div>}
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href={SOCIAL.instagramDM} target="_blank" rel="noopener" class="btn-primary">
+            {dict.next.cta}
+          </a>
+          <a href={eventData.mapUrl} target="_blank" rel="noopener" class={isHero ? 'btn-outline' : 'btn-outline-cream'}>
+            {dict.next.mapCta}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: `BKC ゆめ @ ${venue}`,
+  startDate: `${eventData.date}T${eventData.startTime}:00+09:00`,
+  endDate: `${eventData.date}T${eventData.endTime}:00+09:00`,
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: venue,
+    address: address
+  },
+  organizer: { '@type': 'Organization', name: 'BKC ゆめ', url: 'https://bkc-yume.pages.dev' }
+})} />

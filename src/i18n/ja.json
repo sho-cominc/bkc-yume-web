@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "siteName": "BKC ゆめ",
+    "titleBase": "上越・妙高のパフェ専門キッチンカー BKC ゆめ",
+    "description": "新潟・上越・妙高・糸魚川を巡るパフェ専門キッチンカー「BKC ゆめ」。甘すぎないこだわりの生クリームで仕上げる季節のパフェ ¥800〜¥1,000。次回出店はこちら。",
+    "tagline": "見て楽しんで ♡ 食べて楽しんで ♡"
+  },
+  "nav": {
+    "top": "トップ",
+    "menu": "メニュー",
+    "schedule": "出店情報",
+    "about": "わたしたち",
+    "contact": "お問い合わせ",
+    "lang": { "ja": "JA", "en": "EN" }
+  },
+  "hero": {
+    "eyebrow": "上越・妙高 パフェ専門キッチンカー",
+    "title": "見て楽しんで ♡\n食べて楽しんで ♡",
+    "body": "甘すぎないこだわりの生クリームと、季節の果物。BKC ゆめはあなたの街にお邪魔します。",
+    "ctaPrimary": "次回出店を見る",
+    "ctaSecondary": "メニューを見る",
+    "ctaTertiary": "@bkc_yu____me"
+  },
+  "next": {
+    "label": "NEXT POP-UP / 次回出店",
+    "cta": "DMで取り置き相談",
+    "mapCta": "Google Mapsで開く"
+  },
+  "aboutExcerpt": {
+    "heading": "こだわりの生クリーム",
+    "body": "甘すぎず、軽やか。素材と温度にこだわって仕上げる生クリームが主役。果物の季節感をそのままパフェに閉じ込めます。",
+    "cta": "わたしたちのこと"
+  },
+  "menuPreview": {
+    "heading": "季節のパフェ",
+    "cta": "メニューをすべて見る"
+  },
+  "instaCta": {
+    "body": "フォローして次回出店を見逃さない"
+  },
+  "menu": {
+    "heading": "メニュー",
+    "sub": "¥800〜¥1,000・季節限定あり",
+    "filters": { "all": "すべて", "standard": "定番", "seasonal": "季節限定", "event": "イベント限定" },
+    "allergenToggle": "アレルゲン情報",
+    "seasonalBadge": "季節限定",
+    "eventBadge": "イベント限定"
+  },
+  "schedule": {
+    "heading": "出店情報",
+    "sub": "最新の出店スケジュールはInstagramでも随時お知らせしています。",
+    "monthHeading": "今月の出店予定",
+    "instaHeading": "最近の様子",
+    "instaPlaceholder": "Instagram埋め込み（準備中）",
+    "pastHeading": "これまでの出店先"
+  },
+  "about": {
+    "heading": "わたしたち",
+    "origin": {
+      "title": "店名の由来",
+      "body": "「ゆめ」は、食べた人がふっと笑顔になるような、そんな小さな夢の瞬間を届けたいという想いから。BLACK KITCHEN CARの黒い車体に、ピンクのゆめを乗せて走ります。"
+    },
+    "cream": {
+      "title": "こだわりの生クリーム",
+      "body": "砂糖を極力抑え、乳の香りを活かすレシピ。温度管理を徹底し、口溶けとキレを両立させています。果物の酸味や香りを邪魔しない、あくまで引き立て役としての生クリーム。"
+    },
+    "maker": {
+      "title": "つくっている人",
+      "body": "一つひとつ、その場で仕上げています。お客さんの顔を見ながら作る、それがキッチンカーの醍醐味です。"
+    }
+  },
+  "contact": {
+    "heading": "お問い合わせ",
+    "reply": "オーナーが24時間以内に返信します",
+    "dm": "Instagram DMで聞く",
+    "mailto": "メールで送る",
+    "threads": "Threadsを見る",
+    "note": "出店依頼・取材・取り置きのご相談など、お気軽にどうぞ。"
+  },
+  "footer": {
+    "tagline": "見て楽しんで ♡ 食べて楽しんで ♡",
+    "area": "営業エリア：上越市 / 妙高市 / 糸魚川市",
+    "rights": "© BKC ゆめ"
+  },
+  "stickyCta": "Instagram DMで聞く"
+}

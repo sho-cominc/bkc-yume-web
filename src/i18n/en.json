@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "siteName": "BKC Yume",
+    "titleBase": "BKC Yume — Parfait Food Truck in Joetsu & Myoko, Niigata",
+    "description": "Parfait food truck touring Joetsu, Myoko & Itoigawa in Niigata. Seasonal parfaits ¥800–¥1,000 with artisan, not-too-sweet whipped cream. See our next pop-up.",
+    "tagline": "See it, love it ♡ Taste it, love it ♡"
+  },
+  "nav": {
+    "top": "Home",
+    "menu": "Menu",
+    "schedule": "Pop-ups",
+    "about": "About",
+    "contact": "Contact",
+    "lang": { "ja": "JA", "en": "EN" }
+  },
+  "hero": {
+    "eyebrow": "Parfait food truck — Joetsu & Myoko",
+    "title": "See it, love it ♡\nTaste it, love it ♡",
+    "body": "Artisan whipped cream, not too sweet. Seasonal fruit at its peak. BKC Yume rolls into your town.",
+    "ctaPrimary": "See next pop-up",
+    "ctaSecondary": "See the menu",
+    "ctaTertiary": "@bkc_yu____me"
+  },
+  "next": {
+    "label": "NEXT POP-UP",
+    "cta": "DM to reserve",
+    "mapCta": "Open in Google Maps"
+  },
+  "aboutExcerpt": {
+    "heading": "Our whipped cream",
+    "body": "Not too sweet. Light. Built around temperature and ingredient discipline — the cream is the star, framing each seasonal fruit.",
+    "cta": "About us"
+  },
+  "menuPreview": {
+    "heading": "Seasonal parfaits",
+    "cta": "See full menu"
+  },
+  "instaCta": {
+    "body": "Follow for next pop-up"
+  },
+  "menu": {
+    "heading": "Menu",
+    "sub": "¥800–¥1,000 · seasonal rotations",
+    "filters": { "all": "All", "standard": "Standard", "seasonal": "Seasonal", "event": "Event-only" },
+    "allergenToggle": "Allergen info",
+    "seasonalBadge": "Seasonal",
+    "eventBadge": "Event-only"
+  },
+  "schedule": {
+    "heading": "Pop-ups",
+    "sub": "Up-to-date schedule also lives on Instagram.",
+    "monthHeading": "This month",
+    "instaHeading": "Recent pop-ups",
+    "instaPlaceholder": "Instagram embed (coming soon)",
+    "pastHeading": "Past venues"
+  },
+  "about": {
+    "heading": "About us",
+    "origin": {
+      "title": "The name",
+      "body": "\"Yume\" means dream — small, warm moments that make people smile. We carry a pink dream on the black body of a BLACK KITCHEN CAR."
+    },
+    "cream": {
+      "title": "The cream",
+      "body": "Low sugar, lifted by dairy aroma. Temperature-controlled for clean melt and crisp finish. The cream supports the fruit, never fights it."
+    },
+    "maker": {
+      "title": "The maker",
+      "body": "Every parfait finished in front of you. Seeing our guests' faces while we build — that's the joy of a food truck."
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "reply": "Owner replies within 24 hours",
+    "dm": "Message on Instagram DM",
+    "mailto": "Send email",
+    "threads": "See Threads",
+    "note": "Bookings, press, reservations — say hi."
+  },
+  "footer": {
+    "tagline": "See it, love it ♡ Taste it, love it ♡",
+    "area": "Service area: Joetsu / Myoko / Itoigawa",
+    "rights": "© BKC Yume"
+  },
+  "stickyCta": "Ask on Instagram DM"
+}

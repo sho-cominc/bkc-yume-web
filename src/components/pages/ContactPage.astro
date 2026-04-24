@@ -1,0 +1,30 @@
+---
+import { type Lang, getDict, SOCIAL } from '../../utils/i18n';
+import SectionHeading from '../SectionHeading.astro';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const dict = getDict(lang);
+---
+<section class="section-cream">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 py-16 md:py-24">
+    <SectionHeading eyebrow="CONTACT" title={dict.contact.heading} sub={dict.contact.note} />
+
+    <div class="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-caramel/20 text-ink font-bold text-sm">
+      ✓ {dict.contact.reply}
+    </div>
+
+    <div class="mt-10 flex flex-col gap-4">
+      <a href={SOCIAL.instagramDM} target="_blank" rel="noopener"
+         class="btn-primary w-full py-6 text-lg">
+        ✉ {dict.contact.dm}
+      </a>
+      <a href={SOCIAL.email} class="btn-outline w-full py-5">
+        ✎ {dict.contact.mailto}
+      </a>
+      <a href={SOCIAL.threads} target="_blank" rel="noopener" class="text-center text-ink/70 hover:text-berry font-bold py-3">
+        @ {dict.contact.threads}
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "id": "strawberry-dream",
+      "name": { "ja": "苺のゆめパフェ", "en": "Strawberry Dream Parfait" },
+      "price": 1000,
+      "category": "seasonal",
+      "image": "/images/parfait-sample-1.svg",
+      "description": {
+        "ja": "新潟産の苺と自家製生クリーム。軽やかでキレのある口溶け。",
+        "en": "Niigata strawberries with our signature whipped cream — light with a clean finish."
+      },
+      "allergens": ["milk", "egg", "wheat"],
+      "featured": true
+    },
+    {
+      "id": "matcha-warabi",
+      "name": { "ja": "抹茶とわらび餅パフェ", "en": "Matcha & Warabi-mochi Parfait" },
+      "price": 950,
+      "category": "standard",
+      "image": "/images/parfait-sample-2.svg",
+      "description": {
+        "ja": "宇治抹茶のほろ苦さと、もちもちわらび餅。甘さ控えめの定番。",
+        "en": "Uji matcha's gentle bitterness meets chewy warabi-mochi — a low-sweet staple."
+      },
+      "allergens": ["milk", "egg"],
+      "featured": true
+    },
+    {
+      "id": "choco-banana",
+      "name": { "ja": "チョコバナナパフェ", "en": "Choco Banana Parfait" },
+      "price": 900,
+      "category": "standard",
+      "image": "/images/parfait-sample-3.svg",
+      "description": {
+        "ja": "子供も大人も大好きな王道。濃厚ビターチョコと完熟バナナ。",
+        "en": "Timeless, for kids and adults — bittersweet chocolate and ripe banana."
+      },
+      "allergens": ["milk", "egg", "wheat", "soy"],
+      "featured": true
+    },
+    {
+      "id": "melon-cream",
+      "name": { "ja": "メロンの山パフェ", "en": "Melon Mountain Parfait" },
+      "price": 1000,
+      "category": "seasonal",
+      "image": "/images/parfait-sample-4.svg",
+      "description": {
+        "ja": "旬のメロンを贅沢に。軽い生クリームでメロンの香りを引き立てます。",
+        "en": "Seasonal melon, showcased — light cream lifts the aroma."
+      },
+      "allergens": ["milk", "egg"],
+      "featured": false
+    },
+    {
+      "id": "kurumi-caramel",
+      "name": { "ja": "くるみキャラメルパフェ", "en": "Walnut Caramel Parfait" },
+      "price": 900,
+      "category": "standard",
+      "image": "/images/parfait-sample-5.svg",
+      "description": {
+        "ja": "香ばしいくるみとほろ苦キャラメル。大人のための一杯。",
+        "en": "Toasted walnut and bittersweet caramel — one for the grown-ups."
+      },
+      "allergens": ["milk", "egg", "wheat", "tree-nuts"],
+      "featured": false
+    },
+    {
+      "id": "event-sakura",
+      "name": { "ja": "桜と白あんパフェ", "en": "Sakura & Shiro-an Parfait" },
+      "price": 1000,
+      "category": "event",
+      "image": "/images/parfait-sample-6.svg",
+      "description": {
+        "ja": "観桜会限定。桜の香りと白あんのやさしい甘さ。",
+        "en": "Cherry-blossom festival limited. Sakura aroma and mellow white-bean sweetness."
+      },
+      "allergens": ["milk", "egg", "soy"],
+      "featured": false
+    }
+  ],
+  "allergenLabels": {
+    "milk": { "ja": "乳", "en": "Milk" },
+    "egg": { "ja": "卵", "en": "Egg" },
+    "wheat": { "ja": "小麦", "en": "Wheat" },
+    "soy": { "ja": "大豆", "en": "Soy" },
+    "tree-nuts": { "ja": "ナッツ類", "en": "Tree nuts" }
+  }
+}
