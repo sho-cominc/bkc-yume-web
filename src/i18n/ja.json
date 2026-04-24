@@ -19,7 +19,7 @@
     "body": "甘すぎないこだわりの生クリームと、季節の果物。BKC ゆめはあなたの街にお邪魔します。",
     "ctaPrimary": "次回出店を見る",
     "ctaSecondary": "メニューを見る",
-    "ctaTertiary": "@bkc_yu____me"
+    "ctaTertiary": "@bkc_yu_____me"
   },
   "next": {
     "label": "NEXT POP-UP / 次回出店",
@@ -27,8 +27,8 @@
     "mapCta": "Google Mapsで開く"
   },
   "aboutExcerpt": {
-    "heading": "こだわりの生クリーム",
-    "body": "甘すぎず、軽やか。素材と温度にこだわって仕上げる生クリームが主役。果物の季節感をそのままパフェに閉じ込めます。",
+    "heading": "看板は、BLACK。",
+    "body": "竹炭のクリームで染めた、真っ黒なシグネチャーパフェ。甘さを抑え、ほろ苦さまで楽しむ大人の一杯。BKC ゆめの顔です。",
     "cta": "わたしたちのこと"
   },
   "menuPreview": {
@@ -49,7 +49,7 @@
   "schedule": {
     "heading": "出店情報",
     "sub": "最新の出店スケジュールはInstagramでも随時お知らせしています。",
-    "monthHeading": "今月の出店予定",
+    "monthHeading": "最近の出店",
     "instaHeading": "最近の様子",
     "instaPlaceholder": "Instagram埋め込み（準備中）",
     "pastHeading": "これまでの出店先"

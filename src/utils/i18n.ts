@@ -34,9 +34,9 @@ export function pick<T>(obj: { ja: T; en: T }, lang: Lang): T {
 }
 
 export const SOCIAL = {
-  instagram: 'https://instagram.com/bkc_yu____me',
-  instagramDM: 'https://ig.me/m/bkc_yu____me',
-  threads: 'https://www.threads.net/@bkc_yu____me',
+  instagram: 'https://instagram.com/bkc_yu_____me',
+  instagramDM: 'https://ig.me/m/bkc_yu_____me',
+  threads: 'https://www.threads.net/@bkc_yu_____me',
   // TODO: replace with real inbox before launch (placeholder kept to avoid build-time failure)
   email: 'mailto:hello@bkc-yume.example'
 };

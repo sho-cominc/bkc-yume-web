@@ -49,8 +49,13 @@ const featured = menuData.items.filter((i) => i.featured).slice(0, 3);
 <!-- About excerpt -->
 <section class="section-cream">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-    <div class="aspect-[4/5] bg-placeholder rounded-card flex items-center justify-center text-cream/40">
-      photo coming soon 🍓
+    <div class="aspect-[4/5] rounded-card overflow-hidden bg-ink">
+      <img
+        src="/images/parfait-black.jpg"
+        alt={dict.aboutExcerpt.heading}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
     </div>
     <div>
       <SectionHeading title={dict.aboutExcerpt.heading} />
@@ -77,7 +82,7 @@ const featured = menuData.items.filter((i) => i.featured).slice(0, 3);
 <section class="section-cream">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16">
     <div class="rounded-card bg-berry text-cream p-10 md:p-16 text-center">
-      <div class="font-display text-4xl md:text-6xl leading-tight">@bkc_yu____me</div>
+      <div class="font-display text-4xl md:text-6xl leading-tight">@bkc_yu_____me</div>
       <p class="mt-4 text-cream/90 max-w-xl mx-auto">{dict.instaCta.body}</p>
       <a href={SOCIAL.instagram} target="_blank" rel="noopener" class="mt-8 inline-flex items-center justify-center gap-2 rounded-soft bg-ink text-cream px-8 py-4 font-bold hover:opacity-90">
         Instagram →

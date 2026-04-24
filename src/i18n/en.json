@@ -19,7 +19,7 @@
     "body": "Artisan whipped cream, not too sweet. Seasonal fruit at its peak. BKC Yume rolls into your town.",
     "ctaPrimary": "See next pop-up",
     "ctaSecondary": "See the menu",
-    "ctaTertiary": "@bkc_yu____me"
+    "ctaTertiary": "@bkc_yu_____me"
   },
   "next": {
     "label": "NEXT POP-UP",
@@ -27,8 +27,8 @@
     "mapCta": "Open in Google Maps"
   },
   "aboutExcerpt": {
-    "heading": "Our whipped cream",
-    "body": "Not too sweet. Light. Built around temperature and ingredient discipline — the cream is the star, framing each seasonal fruit.",
+    "heading": "Our signature: BLACK.",
+    "body": "A jet-black parfait colored with bamboo charcoal cream. Low sugar, quietly bitter, built for grown-up palates. This is the face of BKC Yume.",
     "cta": "About us"
   },
   "menuPreview": {
@@ -49,7 +49,7 @@
   "schedule": {
     "heading": "Pop-ups",
     "sub": "Up-to-date schedule also lives on Instagram.",
-    "monthHeading": "This month",
+    "monthHeading": "Recent pop-ups",
     "instaHeading": "Recent pop-ups",
     "instaPlaceholder": "Instagram embed (coming soon)",
     "pastHeading": "Past venues"
