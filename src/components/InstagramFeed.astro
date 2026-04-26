@@ -17,7 +17,7 @@ const hasPosts = urls.length > 0;
     </div>
     <div class="mt-8">
       {hasPosts ? (
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center [&>*]:w-full [&>*]:max-w-md">
           {urls.map((url) => <IgEmbed url={url} />)}
         </div>
       ) : (
@@ -32,4 +32,19 @@ const hasPosts = urls.length > 0;
     </div>
   </div>
 </section>
-{hasPosts && <script async src="//www.instagram.com/embed.js"></script>}
+{hasPosts && (
+  <script is:inline>
+    (function() {
+      function process() { try { window.instgrm && window.instgrm.Embeds && window.instgrm.Embeds.process(); } catch (e) {} }
+      if (window.instgrm) {
+        process();
+        return;
+      }
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.instagram.com/embed.js';
+      s.onload = process;
+      document.body.appendChild(s);
+    })();
+  </script>
+)}
