@@ -22,7 +22,7 @@ const dict = getDict(lang);
     <h2 class="font-display text-3xl md:text-4xl">{dict.schedule.monthHeading}</h2>
     <ul class="mt-8 divide-y divide-ink/10 border-y border-ink/10">
       {eventData.thisMonth.map((e) => {
-        const venue = pick(e.venue as any, lang);
+        const venue = pick(e.venue, lang);
         return (
           <li class="py-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
             <div class="font-en font-bold text-berry w-28 shrink-0">{e.date}</div>
@@ -42,7 +42,7 @@ const dict = getDict(lang);
     <h2 class="font-display text-3xl md:text-4xl text-cream">{dict.schedule.pastHeading}</h2>
     <div class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
       {eventData.pastVenues.map((v) => {
-        const name = pick(v as any, lang);
+        const name = pick(v, lang);
         return (
           <div class="p-5 rounded-card bg-cream/5 border border-cream/10 text-cream">
             <div class="font-bold">{name}</div>

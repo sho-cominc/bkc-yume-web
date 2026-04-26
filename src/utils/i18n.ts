@@ -10,10 +10,6 @@ export function getDict(lang: Lang) {
   return dicts[lang];
 }
 
-export function localeStaticPaths() {
-  return LANGS.map((lang) => ({ params: { lang } }));
-}
-
 export function basePath(lang: Lang, path = '') {
   const clean = path.replace(/^\/+/, '').replace(/\/+$/, '');
   return clean ? `/${lang}/${clean}/` : `/${lang}/`;
@@ -29,7 +25,9 @@ export const PAGE_PATH: Record<PageKey, string> = {
   contact: 'contact'
 };
 
-export function pick<T>(obj: { ja: T; en: T }, lang: Lang): T {
+// Accept any record keyed by Lang. Generic over T so callers don't need `as any`
+// when JSON imports have literal-string typings.
+export function pick<T>(obj: Record<Lang, T>, lang: Lang): T {
   return obj[lang];
 }
 

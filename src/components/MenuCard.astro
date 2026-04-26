@@ -10,8 +10,8 @@ interface Props {
 const { lang, itemId, defaultOpen = false } = Astro.props;
 const dict = getDict(lang);
 const item = menuData.items.find((i) => i.id === itemId)!;
-const name = pick(item.name as any, lang);
-const desc = pick(item.description as any, lang);
+const name = pick(item.name, lang);
+const desc = pick(item.description, lang);
 const labels = menuData.allergenLabels as Record<string, { ja: string; en: string }>;
 
 const badgeText = item.category === 'seasonal' ? dict.menu.seasonalBadge : item.category === 'event' ? dict.menu.eventBadge : '';
@@ -19,7 +19,7 @@ const badgeColor = item.category === 'seasonal' ? 'bg-caramel text-ink' : item.c
 ---
 <article class="bg-cream rounded-card overflow-hidden shadow-sm border border-ink/5 flex flex-col">
   <div class="relative aspect-[4/5] bg-placeholder flex items-center justify-center">
-    <img src={item.image} alt={name} class="w-full h-full object-cover" loading="lazy" />
+    <img src={item.image} alt={name} width="800" height="1000" class="w-full h-full object-cover" loading="lazy" decoding="async" />
     {badgeText && (
       <span class={`absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full ${badgeColor}`}>{badgeText}</span>
     )}

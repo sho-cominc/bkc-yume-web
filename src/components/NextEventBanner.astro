@@ -8,10 +8,10 @@ const dict = getDict(lang);
 const isHero = variant === 'hero';
 const isTbd = eventData.status === 'tbd' || !eventData.date;
 
-const venue = pick(eventData.venue as any, lang);
-const note = pick(eventData.note as any, lang);
-const address = isTbd ? '' : pick(eventData.address as any, lang);
-const weekday = isTbd || !eventData.weekday ? '' : pick(eventData.weekday as any, lang);
+const venue = pick(eventData.venue, lang);
+const note = pick(eventData.note, lang);
+const address = isTbd ? '' : pick(eventData.address, lang);
+const weekday = isTbd || !eventData.weekday ? '' : pick(eventData.weekday, lang);
 const dateStr = isTbd || !eventData.date ? (lang === 'ja' ? '調整中' : 'TBA') : formatDate(eventData.date, lang, weekday);
 
 const igCta = lang === 'ja' ? 'Instagramで最新情報' : 'Latest on Instagram';
@@ -71,5 +71,5 @@ const igCta = lang === 'ja' ? 'Instagramで最新情報' : 'Latest on Instagram'
       address: address
     },
     organizer: { '@type': 'Organization', name: 'BKC ゆめ', url: 'https://bkc-yume.pages.dev' }
-  })} />
+  }).replace(/</g, '\\u003c')} />
 )}

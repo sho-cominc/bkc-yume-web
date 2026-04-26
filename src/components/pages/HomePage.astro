@@ -16,9 +16,14 @@ const featured = menuData.items.filter((i) => i.featured).slice(0, 3);
     <img
       src="/images/parfait-black.jpg"
       alt=""
+      width="1600"
+      height="2000"
       class="w-full h-full object-cover scale-[1.6] origin-center opacity-80"
       aria-hidden="true"
+      role="presentation"
       loading="eager"
+      decoding="async"
+      fetchpriority="high"
     />
     <div class="absolute inset-0 bg-gradient-to-br from-ink/80 via-ink/60 to-ink/85"></div>
   </div>
@@ -53,8 +58,11 @@ const featured = menuData.items.filter((i) => i.featured).slice(0, 3);
       <img
         src="/images/parfait-black.jpg"
         alt={dict.aboutExcerpt.heading}
+        width="800"
+        height="1000"
         class="w-full h-full object-cover"
         loading="lazy"
+        decoding="async"
       />
     </div>
     <div>

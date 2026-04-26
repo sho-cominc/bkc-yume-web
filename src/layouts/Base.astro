@@ -42,24 +42,26 @@ const altPath = `https://bkc-yume.pages.dev/${alt}${path}`;
     <meta property="og:locale" content={lang === 'ja' ? 'ja_JP' : 'en_US'} />
     <meta property="og:locale:alternate" content={lang === 'ja' ? 'en_US' : 'ja_JP'} />
     <meta name="twitter:card" content="summary_large_image" />
-    <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'FoodEstablishment',
-      name: dict.meta.siteName,
-      description: dict.meta.description,
-      url: canonical,
-      servesCuisine: 'Dessert / Parfait',
-      priceRange: '¥800-¥1,000',
-      areaServed: [
-        { '@type': 'City', name: 'Joetsu' },
-        { '@type': 'City', name: 'Myoko' },
-        { '@type': 'City', name: 'Itoigawa' }
-      ],
-      sameAs: [
-        'https://instagram.com/bkc_yu_____me',
-        'https://www.threads.net/@bkc_yu_____me'
-      ]
-    })} />
+    {pageKey === 'top' && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FoodEstablishment',
+        name: dict.meta.siteName,
+        description: dict.meta.description,
+        url: canonical,
+        servesCuisine: 'Dessert / Parfait',
+        priceRange: '¥800-¥1,000',
+        areaServed: [
+          { '@type': 'City', name: 'Joetsu' },
+          { '@type': 'City', name: 'Myoko' },
+          { '@type': 'City', name: 'Itoigawa' }
+        ],
+        sameAs: [
+          'https://instagram.com/bkc_yu_____me',
+          'https://www.threads.net/@bkc_yu_____me'
+        ]
+      }).replace(/</g, '\\u003c')} />
+    )}
   </head>
   <body>
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-berry focus:text-cream focus:px-3 focus:py-2 focus:rounded-soft">Skip to content</a>
