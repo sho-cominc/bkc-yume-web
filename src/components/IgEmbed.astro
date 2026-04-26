@@ -3,7 +3,10 @@ interface Props {
   url: string;
 }
 const { url } = Astro.props;
-const cleanUrl = url.replace(/\/?$/, '/');
+// Normalize to https://www.instagram.com/p/<id>/ — embed.js builds /embed/captioned/
+// from this. URLs with a username segment (/<user>/p/<id>/) hit a 404 page.
+const m = url.match(/instagram\.com\/(?:[^/]+\/)?(p|reel|tv)\/([^/?#]+)/i);
+const cleanUrl = m ? `https://www.instagram.com/${m[1]}/${m[2]}/` : url;
 ---
 <blockquote
   class="instagram-media"
