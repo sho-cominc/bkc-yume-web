@@ -1,13 +1,11 @@
 ---
-import { type Lang, getDict, pick, formatDate } from '../../utils/i18n';
+import { pick } from '../../utils/i18n';
 import SectionHeading from '../SectionHeading.astro';
 import NextEventBanner from '../NextEventBanner.astro';
 import InstagramFeed from '../InstagramFeed.astro';
 import eventData from '../../data/next-event.json';
 
-interface Props { lang: Lang; }
-const { lang } = Astro.props;
-const dict = getDict(lang);
+const { lang, dict } = Astro.locals;
 ---
 <section class="section-cream">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 pt-16 md:pt-24 pb-0">
@@ -15,7 +13,7 @@ const dict = getDict(lang);
   </div>
 </section>
 
-<NextEventBanner lang={lang} variant="hero" />
+<NextEventBanner variant="hero" />
 
 <section class="section-cream">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16">
@@ -35,7 +33,7 @@ const dict = getDict(lang);
   </div>
 </section>
 
-<InstagramFeed lang={lang} />
+<InstagramFeed />
 
 <section class="section-ink">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16">

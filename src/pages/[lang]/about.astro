@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import AboutPage from '../../components/pages/AboutPage.astro';
+import { LANGS } from '../../utils/i18n';
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { dict } = Astro.locals;
+---
+<Base pageKey="about" title={dict.about.heading} path="/about/">
+  <AboutPage />
+</Base>

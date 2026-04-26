@@ -1,0 +1,14 @@
+---
+interface Props {
+  /** Tailwind aspect ratio class. Defaults to square. */
+  aspect?: string;
+  /** Override the centered note text (rare). */
+  label?: string;
+  /** Extra classes appended to the wrapper. */
+  class?: string;
+}
+const { aspect = 'aspect-square', label = 'photo coming soon 🍓', class: extra = '' } = Astro.props;
+---
+<div class:list={[aspect, 'bg-placeholder rounded-card flex items-center justify-center text-cream/40 text-sm', extra]}>
+  {label}
+</div>

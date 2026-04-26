@@ -1,10 +1,10 @@
 ---
-import { type Lang, getDict, pick, formatDate, SOCIAL } from '../utils/i18n';
+import { pick, formatDate, SOCIAL } from '../utils/i18n';
 import eventData from '../data/next-event.json';
 
-interface Props { lang: Lang; variant?: 'banner' | 'hero'; }
-const { lang, variant = 'banner' } = Astro.props;
-const dict = getDict(lang);
+interface Props { variant?: 'banner' | 'hero'; }
+const { variant = 'banner' } = Astro.props;
+const { lang, dict } = Astro.locals;
 const isHero = variant === 'hero';
 const isTbd = eventData.status === 'tbd' || !eventData.date;
 

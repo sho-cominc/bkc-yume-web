@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import SchedulePage from '../../components/pages/SchedulePage.astro';
+import { LANGS } from '../../utils/i18n';
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { dict } = Astro.locals;
+---
+<Base pageKey="schedule" title={dict.schedule.heading} path="/schedule/">
+  <SchedulePage />
+</Base>

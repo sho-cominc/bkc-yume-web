@@ -1,9 +1,9 @@
 ---
-import { type Lang, type PageKey, getDict, basePath, PAGE_PATH } from '../utils/i18n';
+import { type PageKey, basePath, PAGE_PATH } from '../utils/i18n';
 
-interface Props { lang: Lang; pageKey: PageKey; variant?: 'dark' | 'light'; }
-const { lang, pageKey, variant = 'dark' } = Astro.props;
-const dict = getDict(lang);
+interface Props { pageKey: PageKey; variant?: 'dark' | 'light'; }
+const { pageKey, variant = 'dark' } = Astro.props;
+const { lang, dict } = Astro.locals;
 
 const path = PAGE_PATH[pageKey] ?? '';
 const jaHref = basePath('ja', path);

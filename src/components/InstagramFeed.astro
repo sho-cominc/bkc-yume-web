@@ -1,11 +1,9 @@
 ---
-import { type Lang, getDict, SOCIAL } from '../utils/i18n';
+import { SOCIAL } from '../utils/i18n';
 import IgEmbed from './IgEmbed.astro';
 import featuredPosts from '../data/featured-posts.json';
 
-interface Props { lang: Lang; }
-const { lang } = Astro.props;
-const dict = getDict(lang);
+const { dict } = Astro.locals;
 const urls: string[] = (featuredPosts.urls ?? []).filter(Boolean);
 const hasPosts = urls.length > 0;
 ---

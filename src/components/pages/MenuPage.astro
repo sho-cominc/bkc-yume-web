@@ -1,12 +1,9 @@
 ---
-import { type Lang, getDict } from '../../utils/i18n';
 import SectionHeading from '../SectionHeading.astro';
 import MenuCard from '../MenuCard.astro';
 import menuData from '../../data/menu.json';
 
-interface Props { lang: Lang; }
-const { lang } = Astro.props;
-const dict = getDict(lang);
+const { dict } = Astro.locals;
 ---
 <section class="section-cream">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
@@ -22,7 +19,7 @@ const dict = getDict(lang);
     <div id="menu-grid" class="mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
       {menuData.items.map((item, idx) => (
         <div data-category={item.category}>
-          <MenuCard lang={lang} itemId={item.id} defaultOpen={idx === 0} />
+          <MenuCard itemId={item.id} defaultOpen={idx === 0} />
         </div>
       ))}
     </div>

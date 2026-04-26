@@ -1,10 +1,8 @@
 ---
-import { type Lang, getDict } from '../../utils/i18n';
 import SectionHeading from '../SectionHeading.astro';
+import PhotoPlaceholder from '../PhotoPlaceholder.astro';
 
-interface Props { lang: Lang; }
-const { lang } = Astro.props;
-const dict = getDict(lang);
+const { dict } = Astro.locals;
 ---
 <section class="section-cream">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
@@ -18,17 +16,13 @@ const dict = getDict(lang);
       <h3 class="font-display text-3xl md:text-4xl text-berry">{dict.about.origin.title}</h3>
       <p class="mt-6 leading-relaxed text-cream/90">{dict.about.origin.body}</p>
     </div>
-    <div class="aspect-square bg-placeholder rounded-card flex items-center justify-center text-cream/40">
-      photo coming soon 🍓
-    </div>
+    <PhotoPlaceholder />
   </div>
 </section>
 
 <section class="section-cream">
   <div class="mx-auto max-w-5xl px-4 sm:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-    <div class="aspect-square bg-placeholder rounded-card flex items-center justify-center text-cream/40 md:order-first">
-      photo coming soon 🍓
-    </div>
+    <PhotoPlaceholder class="md:order-first" />
     <div>
       <h3 class="font-display text-3xl md:text-4xl">{dict.about.cream.title}</h3>
       <p class="mt-6 leading-relaxed opacity-80">{dict.about.cream.body}</p>
@@ -42,8 +36,6 @@ const dict = getDict(lang);
       <h3 class="font-display text-3xl md:text-4xl text-berry">{dict.about.maker.title}</h3>
       <p class="mt-6 leading-relaxed text-cream/90">{dict.about.maker.body}</p>
     </div>
-    <div class="aspect-square bg-placeholder rounded-card flex items-center justify-center text-cream/40">
-      photo coming soon 🍓
-    </div>
+    <PhotoPlaceholder />
   </div>
 </section>

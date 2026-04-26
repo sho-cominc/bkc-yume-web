@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import HomePage from '../../components/pages/HomePage.astro';
+import { LANGS } from '../../utils/i18n';
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+---
+<Base pageKey="top" path="/">
+  <HomePage />
+</Base>

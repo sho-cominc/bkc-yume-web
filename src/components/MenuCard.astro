@@ -1,14 +1,13 @@
 ---
-import { type Lang, pick, getDict } from '../utils/i18n';
+import { pick } from '../utils/i18n';
 import menuData from '../data/menu.json';
 
 interface Props {
-  lang: Lang;
   itemId: string;
   defaultOpen?: boolean;
 }
-const { lang, itemId, defaultOpen = false } = Astro.props;
-const dict = getDict(lang);
+const { itemId, defaultOpen = false } = Astro.props;
+const { lang, dict } = Astro.locals;
 const item = menuData.items.find((i) => i.id === itemId)!;
 const name = pick(item.name, lang);
 const desc = pick(item.description, lang);

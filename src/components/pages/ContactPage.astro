@@ -1,10 +1,8 @@
 ---
-import { type Lang, getDict, SOCIAL } from '../../utils/i18n';
+import { SOCIAL } from '../../utils/i18n';
 import SectionHeading from '../SectionHeading.astro';
 
-interface Props { lang: Lang; }
-const { lang } = Astro.props;
-const dict = getDict(lang);
+const { dict } = Astro.locals;
 ---
 <section class="section-cream">
   <div class="mx-auto max-w-3xl px-4 sm:px-6 py-16 md:py-24">

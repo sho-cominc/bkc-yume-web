@@ -1,14 +1,14 @@
 ---
-import { type Lang, type PageKey, getDict, basePath, PAGE_PATH } from '../utils/i18n';
+import { type PageKey, basePath, PAGE_PATH } from '../utils/i18n';
 import LangSwitch from './LangSwitch.astro';
 
-interface Props { lang: Lang; pageKey: PageKey; }
-const { lang, pageKey } = Astro.props;
-const dict = getDict(lang);
+interface Props { pageKey: PageKey; }
+const { pageKey } = Astro.props;
+const { lang, dict } = Astro.locals;
 
 const nav = (Object.keys(PAGE_PATH) as PageKey[]).map((key) => ({
   key,
-  label: dict.nav[key === 'top' ? 'top' : key],
+  label: dict.nav[key],
   href: basePath(lang, PAGE_PATH[key])
 }));
 ---
@@ -27,7 +27,7 @@ const nav = (Object.keys(PAGE_PATH) as PageKey[]).map((key) => ({
           ]}
         >{item.label}</a>
       ))}
-      <LangSwitch lang={lang} pageKey={pageKey} variant="dark" />
+      <LangSwitch pageKey={pageKey} variant="dark" />
     </nav>
     <button
       id="nav-toggle"
@@ -39,7 +39,7 @@ const nav = (Object.keys(PAGE_PATH) as PageKey[]).map((key) => ({
   </div>
   <div id="mobile-nav" class="md:hidden hidden bg-ink border-t border-cream/10">
     <div class="px-4 py-4 flex flex-col gap-4">
-      <LangSwitch lang={lang} pageKey={pageKey} variant="dark" />
+      <LangSwitch pageKey={pageKey} variant="dark" />
       {nav.map((item) => (
         <a
           href={item.href}
