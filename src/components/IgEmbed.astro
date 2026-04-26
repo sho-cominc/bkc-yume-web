@@ -1,0 +1,17 @@
+---
+interface Props {
+  url: string;
+}
+const { url } = Astro.props;
+const cleanUrl = url.replace(/\/?$/, '/');
+---
+<blockquote
+  class="instagram-media"
+  data-instgrm-permalink={cleanUrl}
+  data-instgrm-version="14"
+  style="background:#FFF; border:0; border-radius:12px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:0; max-width:540px; min-width:240px; padding:0; width:100%;"
+>
+  <a href={cleanUrl} target="_blank" rel="noopener" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;">
+    View on Instagram
+  </a>
+</blockquote>

@@ -1,9 +1,13 @@
 ---
 import { type Lang, getDict, SOCIAL } from '../utils/i18n';
+import IgEmbed from './IgEmbed.astro';
+import featuredPosts from '../data/featured-posts.json';
 
-interface Props { lang: Lang; beholdId?: string; }
-const { lang, beholdId } = Astro.props;
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
 const dict = getDict(lang);
+const urls: string[] = (featuredPosts.urls ?? []).filter(Boolean);
+const hasPosts = urls.length > 0;
 ---
 <section class="section-cream">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16">
@@ -12,8 +16,10 @@ const dict = getDict(lang);
       <a href={SOCIAL.instagram} target="_blank" rel="noopener" class="btn-primary">@bkc_yu_____me</a>
     </div>
     <div class="mt-8">
-      {beholdId ? (
-        <div data-behold-id={beholdId}></div>
+      {hasPosts ? (
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          {urls.map((url) => <IgEmbed url={url} />)}
+        </div>
       ) : (
         <div class="grid grid-cols-3 gap-2 md:gap-3">
           {Array.from({ length: 9 }).map(() => (
@@ -26,4 +32,4 @@ const dict = getDict(lang);
     </div>
   </div>
 </section>
-{beholdId && <script type="module" src={`https://w.behold.so/widget.js`}></script>}
+{hasPosts && <script async src="//www.instagram.com/embed.js"></script>}
