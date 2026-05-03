@@ -58,7 +58,9 @@
     "heading": "About us",
     "origin": {
       "title": "The name",
-      "body": "\"Yume\" means dream — small, warm moments that make people smile. We carry a pink dream on the black body of a BLACK KITCHEN CAR."
+      "body": "\"Yume\" means dream — small, warm moments that make people smile. We carry a pink dream on the black body of a BLACK KITCHEN CAR.",
+      "domainTitle": "Why five U's?",
+      "domainBody": "Our domain is yuuuuume.co.jp. The five U's are for our five children. Family is the heart of this kitchen car."
     },
     "cream": {
       "title": "The cream",
@@ -80,7 +82,8 @@
   "footer": {
     "tagline": "See it, love it ♡ Taste it, love it ♡",
     "area": "Service area: Joetsu / Myoko / Itoigawa",
-    "rights": "© BKC Yume"
+    "rights": "© BKC Yume",
+    "domainHint": "Five U's, one for each of our five children — the heart of this kitchen car."
   },
   "stickyCta": "Ask on Instagram DM"
 }

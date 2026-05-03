@@ -1,6 +1,7 @@
 ---
 import SectionHeading from '../SectionHeading.astro';
 import PhotoPlaceholder from '../PhotoPlaceholder.astro';
+import DomainStamp from '../DomainStamp.astro';
 
 const { dict } = Astro.locals;
 ---
@@ -15,6 +16,15 @@ const { dict } = Astro.locals;
     <div>
       <h3 class="font-display text-3xl md:text-4xl text-berry">{dict.about.origin.title}</h3>
       <p class="mt-6 leading-relaxed text-cream/90">{dict.about.origin.body}</p>
+      <div class="mt-10 pt-8 border-t border-cream/10">
+        <DomainStamp
+          hint={dict.about.origin.domainTitle}
+          tone="cream"
+          size="lg"
+          link
+        />
+        <p class="mt-4 leading-relaxed text-cream/85 max-w-md">{dict.about.origin.domainBody}</p>
+      </div>
     </div>
     <PhotoPlaceholder />
   </div>

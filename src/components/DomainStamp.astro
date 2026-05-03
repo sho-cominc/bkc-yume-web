@@ -1,0 +1,54 @@
+---
+/**
+ * Visual treatment of the brand domain.
+ *   y  u u u u u  m e . c o . j p
+ *      └ 5 children, 5 U's ┘
+ *
+ * The 5 inner U's are highlighted in berry so the run-of-five becomes
+ * a memorable shape rather than just a string. Sized variants tune
+ * the typography for hero / inline / footer placements.
+ */
+interface Props {
+  /** Hint label shown next to the domain (e.g. "Uが5つの理由"). Optional. */
+  hint?: string;
+  /** Tone — "ink" sits on cream backgrounds, "cream" sits on ink. */
+  tone?: 'ink' | 'cream';
+  /** Visual scale — `lg` for hero/about, `sm` for inline/footer. */
+  size?: 'lg' | 'sm';
+  /** Wrap with a link to the live domain. */
+  link?: boolean;
+  class?: string;
+}
+
+const { hint, tone = 'ink', size = 'sm', link = false, class: extra = '' } = Astro.props;
+
+const colorBase = tone === 'cream' ? 'text-cream' : 'text-ink';
+const colorHint = tone === 'cream' ? 'text-cream/70' : 'text-ink/60';
+const dimText = tone === 'cream' ? 'text-cream/85' : 'text-ink/85';
+
+const fontSize = size === 'lg' ? 'text-3xl md:text-5xl' : 'text-base md:text-lg';
+const innerSize = size === 'lg' ? 'tracking-[0.02em]' : 'tracking-tight';
+const hintSize = size === 'lg' ? 'text-sm md:text-base' : 'text-xs';
+
+const Wrapper = link ? 'a' : 'span';
+const wrapperProps = link ? { href: 'https://yuuuuume.co.jp/', class: 'inline-block' } : {};
+---
+<div class:list={['flex flex-col', extra]}>
+  {hint && <div class:list={[colorHint, hintSize, 'font-bold tracking-widest uppercase mb-1']}>{hint}</div>}
+  <Wrapper {...wrapperProps}>
+    <span
+      class:list={['font-display', fontSize, innerSize, colorBase]}
+      aria-label="yuuuuume dot co dot jp"
+      title="U が 5 つ＝子ども 5 人"
+    >
+      <span class={dimText}>y</span><!--
+   --><span class="text-berry">u</span><!--
+   --><span class="text-berry">u</span><!--
+   --><span class="text-berry">u</span><!--
+   --><span class="text-berry">u</span><!--
+   --><span class="text-berry">u</span><!--
+   --><span class={dimText}>me</span><!--
+   --><span class={dimText}>.co.jp</span>
+    </span>
+  </Wrapper>
+</div>
